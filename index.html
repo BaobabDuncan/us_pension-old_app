@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<title>Pension</title>
+
+<!-- Application my style sheet file -->
+<link rel="stylesheet" type="text/css" href="./css/mystyle.css" />
+
+
+
+<!-- jQuery and jQtouch script file -->
+<style type="text/css" media="screen">
+@import "./jqtouch/jqtouch.css";
+</style>
+<style type="text/css" media="screen">
+@import "./themes/apple/theme.css";
+</style>
+<script src="./jqtouch/jquery-1.4.2.min.js" type="text/javascript"
+	charset="utf-8"></script>
+<script src="./jqtouch/jqtouch.js" type="application/x-javascript"
+	charset="utf-8"></script>
+
+
+
+<!-- Application Base script files -->
+<script type="text/javascript" src="./js/db/DBHandler.js"></script>
+<script type="text/javascript" src="./js/global/Constants.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/global/Global.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/global/ValueObject.js"
+	charset="utf-8"></script>
+
+<!-- extensions script file -->    
+	<script language="Javascript" type="text/javascript" src="./extensions/jquery.jsonp-2.1.2.min.js"></script>
+
+<!-- Application script files -->
+<script type="text/javascript" src="./js/setting/SettingFacade.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/setting/SettingMediator.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/setting/SettingProxy.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/setting/SettingCommand.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript" src="./js/main/MainFacade.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/main/MainMediator.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/main/MainProxy.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/main/MainCommand.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript" src="./js/number/NumberFacade.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/number/NumberMediator.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/number/NumberProxy.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/number/NumberCommand.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript" src="./js/rainbow/RainbowFacade.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/rainbow/RainbowMediator.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/rainbow/RainbowProxy.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/rainbow/RainbowCommand.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript" src="./js/manage/ManageFacade.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/manage/ManageMediator.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/manage/ManageProxy.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="./js/manage/ManageCommand.js"
+	charset="utf-8"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+    	var jQT = new $.jQTouch({
+		  icon:'jqtouch.png'		  
+		});
+		var settingFacade = new pensionApp.SettingFacade();		
+		var mainFacade = new pensionApp.MainFacade();	
+		var rainbowFacade = new pensionApp.RainbowFacade();
+		var manageFacade = new pensionApp.ManageFacade();
+		var numberFacade = new pensionApp.NumberFacade();
+		//dropTable();
+		function onBodyLoad(){					
+			settingFacade.getSettingData();
+			//mainFacade.showMainPage();
+			//rainbowFacade.showRainbowPage();				
+		}
+		function onDeviceReady(){
+			//rainbowFacade.showRainbowPage();			
+			//numberFacade.showNumberPage();
+			mainFacade.showMainPage();
+			//manageFacade.showManagePage();
+			//console.info(mySetting);
+		}
+    </script>
+
+</head>
+<body onload="onBodyLoad()">
+  
+	<center>
+	<div id="loading" class="loading">
+		<img src="./images/loading/ajax-loader.gif">
+	</div>
+	</center>
+	
+	<div id="jqt">
+
+		<div id="test"></div>
+
+		<div id="mainview">
+			<div class="toolbar">
+				<h1>연금복권 520</h1>
+				<a class="button" target="_blank"
+					href="http://uksmart.dothome.co.kr/index.php/iphone_apps/kinggame">About</a>
+			</div>
+			<div id="mainview-wrapper"></div>
+		</div>
+		
+		
+		<div id="numberview">
+			<div class="toolbar">
+				<h1>당첨 번호</h1>
+				<a href="#" class="back">뒤로</a>
+			</div>
+			<div id="numberview-wrapper"></div>
+		</div>
+		
+		<div id="numberdetailview">
+			<div class="toolbar">
+				<h1>당첨 번호</h1>
+				<a href="#" class="back">뒤로</a>
+			</div>
+			<div id="numberdetailview-wrapper"></div>
+		</div>
+		
+		<div id="rainbowview">
+			<div class="toolbar">
+				<h1>무지개 판</h1>
+				<a href="#" class="back">뒤로</a>
+			</div>
+			<div id="rainbowview-wrapper"></div>
+		</div>
+
+		<div id="manageview">
+			<div class="toolbar">
+				<h1>복권 관리</h1>
+				<a href="#" class="back">뒤로</a>
+			</div>
+			<div id="manageview-wrapper"></div>
+		</div>
+
+
+
+	</div>
+</body>
+</html>
+
+
+
+
+
+

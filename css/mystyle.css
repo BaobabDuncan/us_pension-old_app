@@ -1,0 +1,37 @@
+/* loading */
+div.loading {
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: rgba(0,0,0, .5) 0px 1px 1px;
+	width: 100px;     
+	position: absolute;
+	top: 40%;
+	left: 33%;           
+	padding: 13px;
+	background: rgba(255,255,255,.7);
+	color: #000;
+}
+
+table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	background: white;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;	
+	margin: 15px auto 15px auto;
+}
+
+th {
+	text-align: center;	
+	font-size: 18px;
+	font-weight: normal;
+	color: #039;
+	border-bottom: 2px solid #6678B1;
+	padding: 10px 8px;
+}
+
+td {
+	color: #669;
+	padding: 9px 8px 0;
+	
+}
